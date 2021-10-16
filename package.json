@@ -1,0 +1,72 @@
+{
+  "_args": [
+    [
+      {
+        "raw": "/Users/lucasviniciusbrasil/Dropbox/mobi.moica.whatsapp",
+        "scope": null,
+        "escapedName": null,
+        "name": null,
+        "rawSpec": "/Users/lucasviniciusbrasil/Dropbox/mobi.moica.whatsapp",
+        "spec": "/Users/lucasviniciusbrasil/Dropbox/mobi.moica.whatsapp",
+        "type": "directory"
+      },
+      "/Users/lucasviniciusbrasil/Dropbox/iPGuard - TurnKey V2/iPGuard - TurnKey V2"
+    ]
+  ],
+  "_from": "../../mobi.moica.whatsapp",
+  "_inCache": true,
+  "_location": "/mobi.moica.whatsapp",
+  "_phantomChildren": {},
+  "_requested": {
+    "raw": "/Users/lucasviniciusbrasil/Dropbox/mobi.moica.whatsapp",
+    "scope": null,
+    "escapedName": null,
+    "name": null,
+    "rawSpec": "/Users/lucasviniciusbrasil/Dropbox/mobi.moica.whatsapp",
+    "spec": "/Users/lucasviniciusbrasil/Dropbox/mobi.moica.whatsapp",
+    "type": "directory"
+  },
+  "_requiredBy": [
+    "#USER",
+    "/"
+  ],
+  "_resolved": "file:../../mobi.moica.whatsapp",
+  "_shasum": "79c5458a92682ae7f9398ca219e180786c6e249f",
+  "_shrinkwrap": null,
+  "_spec": "/Users/lucasviniciusbrasil/Dropbox/mobi.moica.whatsapp",
+  "_where": "/Users/lucasviniciusbrasil/Dropbox/iPGuard - TurnKey V2/iPGuard - TurnKey V2",
+  "cordova_name": "Whatsapp",
+  "dependencies": {},
+  "description": "Whatsapp Plugin",
+  "devDependencies": {},
+  "engines": [],
+  "issue": "https://github.com/ranjitpandit/whatsapp-phonegap-plugin/issues",
+  "keywords": [
+    "whatsapp"
+  ],
+  "license": "MIT",
+  "name": "mobi.moica.whatsapp",
+  "optionalDependencies": {},
+  "platforms": [
+    "android",
+    "ios"
+  ],
+  "repo": "https://github.com/ranjitpandit/whatsapp-phonegap-plugin.git",
+  "version": "0.0.1",
+  "cordova": {
+    "id": "mobi.moica.whatsapp",
+    "platforms": [
+      "android",
+      "ios"
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/devjva/mobi.moica.whatsapp.git"
+  },
+  "author": "jva",
+  "bugs": {
+    "url": "https://github.com/devjva/mobi.moica.whatsapp/issues"
+  },
+  "homepage": "https://github.com/devjva/mobi.moica.whatsapp#readme"
+}
