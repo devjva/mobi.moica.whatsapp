@@ -9,19 +9,26 @@
 
 - (void)send:(CDVInvokedUrlCommand*)command{
  
-	NSLog(@"Passou aqui merda....");
-    NSURL *whatsappURL = [NSURL URLWithString:@"whatsapp://send?phone=+5511974706010"];
-    if ([[UIApplication sharedApplication] canOpenURL: whatsappURL])
-    {
-
-        [[UIApplication sharedApplication] openURL: whatsappURL];
+    NSString* num = [command.arguments objectAtIndex:0];
+    NSString* text = [command.arguments objectAtIndex:1];
+    
+    NSString *url =  [NSString stringWithFormat: @"%@%@%@%@", @"whatsapp://send?phone=",num, @"&text=",text];
    
-    }
-    else
-    {
-       [self showMessage:@"Sem Whatsapp instalado para entrar em contato com o suporte"
-       withTitle:@"Erro"];
-    }
+
+       
+        UIApplication *application = [UIApplication sharedApplication];
+        NSURL *URL =  [NSURL URLWithString:url];
+        [application openURL:URL options:@{} completionHandler:^(BOOL success) {
+            if (success) {
+                 NSLog(@"Opened url");
+            }else
+            {
+               [self showMessage:@"Sem Whatsapp instalado para entrar em contato com o suporte"
+               withTitle:@"Erro"];
+            }
+        }];
+   
+    
 
 
     CDVPluginResult* pluginResult = [CDVPluginResult resultWithStatus:CDVCommandStatus_OK messageAsString:@"OK"];
