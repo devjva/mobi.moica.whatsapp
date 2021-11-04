@@ -14,20 +14,21 @@
     
     NSString *url =  [NSString stringWithFormat: @"%@%@%@%@", @"whatsapp://send?phone=",num, @"&text=",text];
    
-   
-    NSURL *whatsappURL = [NSURL URLWithString:url];
-   
-    if ([[UIApplication sharedApplication] canOpenURL: whatsappURL])
-    {
 
-        [[UIApplication sharedApplication] openURL: whatsappURL];
+       
+        UIApplication *application = [UIApplication sharedApplication];
+        NSURL *URL =  [NSURL URLWithString:url];
+        [application openURL:URL options:@{} completionHandler:^(BOOL success) {
+            if (success) {
+                 NSLog(@"Opened url");
+            }else
+            {
+               [self showMessage:@"Sem Whatsapp instalado para entrar em contato com o suporte"
+               withTitle:@"Erro"];
+            }
+        }];
    
-    }
-    else
-    {
-       [self showMessage:@"Sem Whatsapp instalado para entrar em contato com o suporte"
-       withTitle:@"Erro"];
-    }
+    
 
 
     CDVPluginResult* pluginResult = [CDVPluginResult resultWithStatus:CDVCommandStatus_OK messageAsString:@"OK"];
